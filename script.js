@@ -1,8 +1,8 @@
     // Функция для сжатия текста в LZ77 с учетом регистра букв
     function lz77Compress(text, caseSensitive) {
         // Инициализация словаря и буфера
-        const dictSize = 4096; // Размер словаря
-        const buffSize = 16; // Размер буфера
+        const dictSize = 12; // Размер словаря
+        const buffSize = 4; // Размер буфера
         let dictionary = ""; // Словарь
         let buffer = text.slice(0, buffSize); // Буфер
         let result = []; // Результат
