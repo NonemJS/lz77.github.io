@@ -87,17 +87,18 @@
       }
       
       // Тестирование функции
-      let text = "В лесу родилась Ёлочка, в лесу она росла. Зимой и летом стройная, зелёная была.";
-      let compressed = lz77Compress(text, caseSensitive=false);
-      console.log(compressed);
+      // let text = "В лесу родилась Ёлочка, в лесу она росла. Зимой и летом стройная, зелёная была.";
+      // let compressed = lz77Compress(text, caseSensitive=false);
+      // console.log(compressed);
       
       function compressText() {
             const inputText = document.getElementById('inputText').value;
             const dictSize = parseInt(document.getElementById('dictionarySize').value);
             const buffSize = parseInt(document.getElementById('bufferSize').value);
-            const caseSensitive = document.getElementById('caseSensitive').checked;
-      
-            const compressed = lz77Compress(inputText, dictSize, buffSize, caseSensitive);
+            // const caseSensitive = document.getElementById('caseSensitive').checked;
+            
+            //const compressed = lz77Compress(inputText, dictSize, buffSize, caseSensitive);
+            const compressed = lz77Compress(inputText, dictSize, buffSize);
             let compressedText = '';
             
             for (let item of compressed) {
